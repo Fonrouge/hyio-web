@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">HyIO Software | Arquitectura de Gestión</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="loading">
+
+    <div id="intro-screen">
+        <div class="intro-content">
+            <img src="assets/logo-full.png" alt="HyIO Software Logo" class="intro-logo">
+            <p class="intro-text"><span data-i18n="intro_presenta">Presenta:</span> <span class="text-blue fw-bold">HyIO
+                    Gestión</span></p>
+        </div>
+    </div>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="app-container">
+
+        <header class="glass-nav">
+            <div class="container nav-wrap">
+                <div class="logo">HyIO<span class="dot">.</span></div>
+                <nav>
+                    <a href="#features" class="nav-link" data-i18n="nav_capabilities">Capacidades</a>
+                    <a href="#academy" class="nav-link" data-i18n="nav_academy">Academy</a>
+                    <a href="mailto:contacto@hyio.com.ar" class="btn btn-primary" data-i18n="nav_demo">Demo Access</a>
+                </nav>
+                <div class="nav-controls">
+                    <button id="theme-toggle" class="toggle-btn" aria-label="Toggle Theme">
+                        <span class="icon">☀</span>
+                    </button>
+                    <button id="lang-toggle" class="toggle-btn" aria-label="Toggle Language">
+                        <span class="lang-text">ES</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container fade-in">
+
+                <img src="assets/HyIOGestion.png" alt="HyIO Logo" class="hero-mini-logo">
+
+                <h1 class="hero-title"><span data-i18n="hero_title_1">Gestión sencilla.</span><br><span
+                        class="text-gradient" data-i18n="hero_title_2">Crecimiento ilimitado.</span></h1>
+
+                <div class="hero-manifesto">
+                    <p data-i18n="manifesto_1">Experiencia ELITE, desde el día uno.</p>
+                    <p data-i18n="manifesto_2">Arquitectura blindada: Cero errores, cero pausas.</p>
+                    <p data-i18n="manifesto_3">Diseñado hoy para tu empresa de mañana.</p>
+                    <p></p>
+                    <p><span class="text-highlight" data-i18n="manifesto_4">HyIO es más que un ERP. Es tu
+                            ventaja</span>.</p>
+                </div>
+
+                <div class="cta-group">
+                    <button class="btn btn-primary" data-i18n="btn_start">Iniciar Recorrido</button>
+                    <button class="btn btn-glass" data-i18n="btn_arch">Ver Arquitectura</button>
+                </div>
+
+                <div class="mockup-wrapper parallax-element">
+                    <img src="assets/dashboard_businessPartnerExampleDark.png" alt="HyIO Dashboard Dark"
+                        class="app-screenshot">
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section-pad">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 data-i18n="perf_title">Rendimiento HyIO</h2>
+                    <p data-i18n="perf_subtitle_1">Pide poco.</p>
+                    <p data-i18n="perf_subtitle_2">Entrega todo.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <div class="bento-card main-card fade-in">
+                        <div class="card-content">
+                            <h3 data-i18n="perf_card_main_title">"¿Lo necesitás para ayer?"</h3>
+                            <p data-i18n="perf_card_main_desc">Implementación inmediata. Soporte local, en tu idioma y
+                                sin burocracia. Empezá hoy mismo.</p>
+                        </div>
+                        <div class="card-visual">
+                            <img src="assets/dashboard_businessPartnerExample.png" alt="UI example">
+                        </div>
+                    </div>
+
+                    <div class="bento-card secondary-card fade-in">
+                        <h3 data-i18n="perf_card_sec_title">¿Tu hardware es viejo?</h3>
+                        <p data-i18n="perf_card_sec_1">HyIO vuela igual.</p>
+                        <p data-i18n="perf_card_sec_2">Optimizado para consumir lo mínimo y rendir al máximo.</p>
+                        <p>&nbsp;</p>
+                        <p data-i18n="perf_card_sec_4"><strong>Tus equipos, tus reglas.</strong></p>
+                    </div>
+
+                    <div class="bento-card secondary-card fade-in">
+                        <h3 data-i18n="perf_card_supp_title">¿Hablás nuestro idioma?</h3>
+                        <p data-i18n="perf_card_supp_1">Nosotros también.</p>
+                        <p data-i18n="perf_card_supp_2">Conocemos la coyuntura argentina mejor que nadie.</p>
+                        <p>&nbsp;</p>
+                        <p data-i18n="perf_card_supp_3">Desarrollo y soporte directo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container feature-spacer">
+                <div class="section-header fade-in">
+                    <h2 data-i18n="custom_title">Personalización HyIO</h2>
+                    <p data-i18n="custom_subtitle_1">Para los clásicos, aire de Oficina.</p>
+                    <p data-i18n="custom_subtitle_2">Para los modernos, aire de Discord.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <div class="bento-card main-card fade-in">
+                        <div class="card-content">
+                            <h3 data-i18n="custom_card_main_title">¿12 horas frente al monitor?</h3>
+                            <p data-i18n="custom_card_main_desc_1">Tus ojos te lo van a agradecer.</p>
+                            <p data-i18n="custom_card_main_desc_2">"Modo Descanso" con colorimetría profesional para
+                                cuidar tu vista, en claro y oscuro.</p>
+                        </div>
+                        <div class="card-visual">
+                            <img src="assets/dashboard_businessPartnerExampleRestMode.png" alt="UI example">
+                        </div>
+                    </div>
+
+                    <div class="bento-card secondary-card fade-in">
+                        <h3 data-i18n="custom_card_sec_title">¿Vibra Gamer?</h3>
+                        <p data-i18n="custom_card_sec_1">OperaGX, Discord, CyberPunk...</p>
+                        <p data-i18n="custom_card_sec_2">¿Por qué el software de gestión tiene que ser aburrido?</p>
+                        <p data-i18n="custom_card_sec_3">Tenemos más paletas que todos ellos juntos.</p>
+                        <p>&nbsp;</p>
+                        <p data-i18n="custom_card_sec_4"><strong>Tu pantalla, tu personalidad.</strong></p>
+                    </div>
+
+                    <div class="bento-card secondary-card fade-in">
+                        <h3 data-i18n="custom_card_home_title">¿Nostalgia de Excel?</h3>
+                        <p data-i18n="custom_card_home_1">No cambies tus hábitos.</p>
+                        <p data-i18n="custom_card_home_2">Interfaz clásica para que te muevas como pez en el agua.</p>
+                        <p>&nbsp;</p>
+                        <p data-i18n="custom_card_home_3">Sentite como en casa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container feature-spacer">
+                <div class="section-header fade-in">
+                    <h2 data-i18n="access_section_title">Accesibilidad Universal</h2>
+                    <p data-i18n="access_section_sub_1">Tecnología sin barreras.</p>
+                    <p data-i18n="access_section_sub_2">Inclusión nativa.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <div class="bento-card main-card fade-in">
+                        <div class="card-content">
+                            <h3 data-i18n="access_card_main_title">Accesibilidad con Hy-nteligencia Artificial</h3>
+                            <p data-i18n="access_card_main_desc_1">Que la tecnología se adapte a vos, y no al revés.</p>
+                            <p data-i18n="access_card_main_desc_2">El módulo Accesibilidad es <strong>gratuito</strong>
+                                en todos los planes.</p>
+                        </div>
+                        <div class="card-visual">
+                            <img src="assets/dashboard_businessPartnerExample.png" alt="UI example">
+                        </div>
+                    </div>
+
+                    <div class="bento-card secondary-card fade-in">
+                        <h3 data-i18n="access_card_motor_title">Tus palabras son órdenes</h3>
+                        <p data-i18n="access_card_motor_1">¿Cansado de teclear y usar el mouse?</p>
+                        <p data-i18n="access_card_motor_2">Control total por voz con motores propios HyIO.</p>
+                        <p>&nbsp;</p>
+                        <p data-i18n="access_card_motor_3"><strong>Producir sin manos es posible.</strong></p>
+                    </div>
+
+                    <div class="bento-card secondary-card fade-in">
+                        <h3 data-i18n="access_card_visual_title">Claridad Total</h3>
+                        <p data-i18n="access_card_visual_1">Zoom inteligente: Lo importante, gigante.</p>
+                        <p data-i18n="access_card_visual_2">Modo Alto Contraste certificado (WCAG-W3C).</p>
+                        <p>&nbsp;</p>
+                        <p data-i18n="access_card_visual_3"><strong>Nadie se queda afuera.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="academy" class="academy">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 40px;">
+                    <div class="fade-in">
+                        <h2 style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 10px;"
+                            data-i18n="academy_title">HyIO Academy</h2>
+                        <p style="color: var(--text-muted);" data-i18n="academy_subtitle">Tu momento de avanzar
+                            comienza con un clic.</p>
+                    </div>
+                    <div style="color: var(--primary); font-size: 2rem;" class="fade-in">▶</div>
+                </div>
+
+                <div class="video-hero fade-in">
+                    <video controls class="main-video" poster="assets/logo-full.png" preload="metadata">
+                        <source src="assets/brand_video.mp4" type="video/mp4">
+                        <span data-i18n="video_unsupported">Tu navegador no soporta la reproducción de video.</span>
+                    </video>
+                </div>
+
+                <div class="video-list">
+                    <div class="vid-card fade-in">
+                        <div class="vid-thumb">⏵</div>
+                        <div class="vid-meta">
+                            <h4 data-i18n="vid_1_title">Primeros Pasos</h4>
+                            <span>2:15 MIN</span>
+                        </div>
+                    </div>
+                    <div class="vid-card fade-in">
+                        <div class="vid-thumb">⏵</div>
+                        <div class="vid-meta">
+                            <h4 data-i18n="vid_2_title">Gestión de Socios</h4>
+                            <span>3:00 MIN</span>
+                        </div>
+                    </div>
+                    <div class="vid-card fade-in">
+                        <div class="vid-thumb">⏵</div>
+                        <div class="vid-meta">
+                            <h4 data-i18n="vid_3_title">Facturación Ágil</h4>
+                            <span>1:45 MIN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="glass-footer">
+            <div class="container">
+                <p class="copyright"><span data-i18n="footer_rights">&copy; 2025 HyIO Software.</span> <span
+                        class="mono">Build 1.0.0</span></p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
