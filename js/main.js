@@ -81,12 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
         let particlesArray = [];
 
         // Particle settings - Aumentamos la cantidad para que se vea más poblado
-        const particleCount = 180; 
+        const particleCount = 180;
         const connectionDistance = 180;
         const mouseDistance = 280; // Slightly larger range
 
         let mouse = { x: undefined, y: undefined };
-        
+
         // Variables for 3D Parallax effect
         let targetParallaxX = 0;
         let targetParallaxY = 0;
@@ -113,17 +113,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Posición real (extendemos un poco el área de spawn para que no se vean bordes cortados al hacer parallax)
                 this.x = Math.random() * (width + 200) - 100;
                 this.y = Math.random() * (height + 200) - 100;
-                
+
                 // Nuevo cálculo de Z: Math.pow crea una curva que hace que haya MUY POCAS
                 // partículas cercanas (Z grande) y MUCHAS partículas lejanas (Z pequeño).
                 // Valores de profundidad virtual desde 0.15 (muy al fondo) a 1.8 (muy al frente)
-                this.z = Math.pow(Math.random(), 2) * 1.65 + 0.15; 
-                
+                this.z = Math.pow(Math.random(), 2) * 1.65 + 0.15;
+
                 // Slower, smoother movement
                 this.vx = (Math.random() - 0.5) * 0.3;
                 this.vy = (Math.random() - 0.5) * 0.3;
                 this.baseSize = Math.random() * 2.5 + 1; // Base size
-                
+
                 // Posición aparente en pantalla
                 this.screenX = this.x;
                 this.screenY = this.y;
@@ -167,11 +167,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         const force = (mouseDistance - distance) / mouseDistance;
                         const directionX = forceDirectionX * force * 0.4;
                         const directionY = forceDirectionY * force * 0.4;
-                        
+
                         // Modificar la magnitud del empujón según la profundidad ayuda al efecto 3D
                         this.x -= directionX * (1.5 - this.z);
                         this.y -= directionY * (1.5 - this.z);
-                        
+
                         // Recalcular screen X y Y luego del empujón
                         this.screenX = this.x - (parallaxX * this.z);
                         this.screenY = this.y - (parallaxY * this.z);
@@ -181,19 +181,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             draw() {
                 ctx.beginPath();
-                
+
                 // Efecto de perspectiva: las partículas más cercanas (Z mayor) se ven levemente más grandes
-                let displaySize = this.baseSize * (this.z * 0.8); 
+                let displaySize = this.baseSize * (this.z * 0.8);
 
                 ctx.arc(this.screenX, this.screenY, displaySize, 0, Math.PI * 2);
-                
+
                 // Dynamic colors based on theme, con opacidad influenciada por la profundidad
                 let baseOpacity = 0.3 + (this.z * 0.45); // Partículas más lejanas se ven más transparentes
-                
+
                 if (currentTheme === 'light') {
                     ctx.fillStyle = `rgba(59, 130, 246, ${baseOpacity})`;
                 } else {
-                    ctx.fillStyle = `rgba(59, 130, 246, ${baseOpacity})`; 
+                    ctx.fillStyle = `rgba(59, 130, 246, ${baseOpacity})`;
                 }
                 ctx.fill();
             }
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Ordenar partículas por profundidad (Z) de lejano a cercano da un mejor efecto
             // pero para performance usaremos el orden original, ya que son formas traslúcidas
-            
+
             for (let i = 0; i < particlesArray.length; i++) {
                 particlesArray[i].update(currentParallaxX, currentParallaxY);
                 particlesArray[i].draw();
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 for (let j = i; j < particlesArray.length; j++) {
                     let dx = particlesArray[i].screenX - particlesArray[j].screenX;
                     let dy = particlesArray[i].screenY - particlesArray[j].screenY;
-                    
+
                     // La distancia también se calcula usando su posición parálaxial
                     let distance = Math.sqrt(dx * dx + dy * dy);
 
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ctx.beginPath();
                         // Refined line opacity
                         let opacity = 1 - (distance / connectionDistance);
-                        
+
                         // Opcional: reducir la opacidad si conectan dos puntos con mucha diferencia de profundidad
                         let zDiff = Math.abs(particlesArray[i].z - particlesArray[j].z);
                         opacity *= Math.max(0, 1 - (zDiff * 0.5)); // Atenúa la línea si cruza mucha profundidad
@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             ctx.strokeStyle = `rgba(59, 130, 246, ${opacity * 0.35})`;
                         } else {
                             // Blanco puro con mayor opacidad para que resalten frente al negro
-                            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.25})`; 
+                            ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.25})`;
                         }
                         ctx.lineWidth = 1;
                         ctx.moveTo(particlesArray[i].screenX, particlesArray[i].screenY);
