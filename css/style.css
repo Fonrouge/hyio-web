@@ -1,8 +1,8 @@
 /* --- VARS & RESET --- */
 :root {
     /* Palette: Sober & Modern */
-    --bg-dark: #020617;
-    /* Ultra Dark Slate - Almost Black */
+    --bg-dark: #000000;
+    /* Pure Black */
     --primary: #3b82f6;
     /* Electric Blue - Professional yet vibrant */
     --primary-dark: #2563eb;
