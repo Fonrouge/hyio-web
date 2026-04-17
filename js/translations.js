@@ -79,6 +79,26 @@ const translations = {
         "access_card_visual_2": "Modo Alto Contraste certificado (WCAG-W3C).",
         "access_card_visual_3": "Nadie se queda afuera.",
 
+        // --- Storytelling ---
+        "nav_story": "¿Un día con HyIO?",
+        "story_main_title": "Un día normal con HyIO",
+        "story_main_subtitle": "El aliado invisible que te acompaña toda la jornada.",
+
+        "story_t1": "El arranque",
+        "story_d1": "Prendo la compu y antes de que caliente el agua para el mate, el sistema ya abrió y revisó que todos mis datos están seguros y nadie los tocó. A laburar.",
+
+        "story_t2": "Pico de ventas",
+        "story_d2": "Local lleno y teléfonos sonando. El Excel antes se me tildaba (mi compu es viejita), pero no sé cómo HyIO vuela. Busco, cobro y despacho en dos toques.",
+
+        "story_t3": "Almuerzo tranquilo",
+        "story_d3": "Me iba a comer y el programa me 'chifló': 'Te queda poco stock de este producto. ¿Mandamos mensaje automático?'. Un click y listo. Al fin un almuerzo sin problemas.",
+
+        "story_t4": "Respiro para los ojos",
+        "story_d4": "Ya van dos cafés y el monitor me empieza a quemar la vista. Un click al Modo Descanso y ya siento el alivio. No más dolor de cabeza.",
+
+        "story_t5": "Cierre y paz total",
+        "story_d5": "Persiana baja. ¿Cuentas bien hechas? ¿Datos guardados? Hago un Backup al pendrive en dos segundos y a casa. Mis números están seguros y yo con la copia en el bolsillo.",
+
         // --- Academy & Footer ---
         "academy_title": "HyIO Academy",
         "academy_subtitle": "Tu momento de avanzar comienza con un clic.",
@@ -167,6 +187,26 @@ const translations = {
         "access_card_visual_1": "Smart Zoom: What matters, bigger.",
         "access_card_visual_2": "High Contrast Mode certified (WCAG-W3C).",
         "access_card_visual_3": "No one gets left behind.",
+
+        // --- Storytelling ---
+        "nav_story": "A day with HyIO?",
+        "story_main_title": "A normal day with HyIO",
+        "story_main_subtitle": "The invisible ally that accompanies you all day long.",
+
+        "story_t1": "The kickoff",
+        "story_d1": "I turn on the PC and before my morning coffee is ready, the system has already opened and checked that all my data is secure. Time to work.",
+
+        "story_t2": "Sales peak",
+        "story_d2": "Store is full, phones are ringing. Excel used to freeze on me, but HyIO flies. I search, charge, and dispatch with two clicks.",
+
+        "story_t3": "Peaceful lunch",
+        "story_d3": "I was about to eat and the program notified me: 'Low stock on this product. Send automated message?'. One click and done. Finally, a lunch with no worries.",
+
+        "story_t4": "Rest for the eyes",
+        "story_d4": "Two coffees in and the monitor is burning my eyes. One click to Rest Mode and I feel the relief. No more headaches.",
+
+        "story_t5": "Closing & total peace",
+        "story_d5": "Shutters down. Are the numbers right? Data saved? I make a quick backup to the flash drive in two seconds and head home. My numbers are safe, and the copy is in my pocket.",
 
         // --- Academy & Footer ---
         "academy_title": "HyIO Academy",
